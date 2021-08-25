@@ -78,6 +78,7 @@ def get_weapon_infox(weapon,refinement):
                   'Refinement': 1,
                   'Passive':'Cr',
                   'Passive2':'None',
+                  'Passive2 Bonus':'none',
                   'Passive Bonus': 0.14}
         weapon['Passive Bonus']=weapon['Passive Bonus']+0.035*(refinement-1)
     else:

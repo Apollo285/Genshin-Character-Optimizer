@@ -151,7 +151,7 @@ def main():
         
     if character['name']!='bennett':
         bennett_boost=False
-        bennett_boost=input('Are you using bennett with this character?:')
+        bennett_boost=input('Are you using bennett with this character? (yes or no):')
         bennett_boost= bennett_boost.lower()
         while True:
             if bennett_boost=='yes' or bennett_boost=='no':
@@ -204,8 +204,16 @@ def main():
     cd_bonus2=0
     if weapon['Main Stat']=='Cr':
         cr_bonus2+= weapon['Main Stat Bonus']
-    if weapon['Main Stat']=='Cd':
+    elif weapon['Main Stat']=='Cd':
         cd_bonus2+= weapon['Main Stat Bonus']
+    if weapon['Passive']=='Cr':
+        cr_bonus2+= weapon['Passive Bonus']
+    elif weapon['Passive']=='Cd':
+        cd_bonus2+= weapon['Passive Bonus']
+    if weapon['Passive2']=='Cr':
+        cr_bonus2+= weapon['Passive2 Bonus']
+    elif weapon['Passive2']=='Cd':
+        cd_bonus2+= weapon['Passive2 Bonus']   
     cr = character['Cr_bonus']+0.05+cr_bonus2
     cd = character['Cd_bonus']+0.5+cd_bonus2
     if artifact['circlet_type']=='crit rate':
