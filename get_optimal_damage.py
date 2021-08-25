@@ -68,21 +68,21 @@ def get_optimal_damagex(character,weapon,epe):
         df_bonus+=weapon['Passive Bonus']
 
     if weapon['Passive2']=='Attack':
-        att_bonus+=weapon['Passive Bonus']
+        att_bonus+=weapon['Passive Bonus 2']
     elif weapon['Passive2']=='Cr':
-        cr_bonus+=weapon['Passive Bonus']
+        cr_bonus+=weapon['Passive Bonus 2']
     elif weapon['Passive2']=='Cd':
-        cd_bonus+=weapon['Passive Bonus']
+        cd_bonus+=weapon['Passive Bonus 2']
     elif weapon['Passive2']=='Em':
-        em_bonus+=weapon['Passive Bonus']
+        em_bonus+=weapon['Passive Bonus 2']
     elif weapon['Passive2']=='Er':
-        er_bonus+=weapon['Passive Bonus']
+        er_bonus+=weapon['Passive Bonus 2']
     elif weapon['Passive2']=='Damage':
-        d_bonus+=weapon['Passive Bonus']
+        d_bonus+=weapon['Passive Bonus 2']
     elif weapon['Passive2']=='Hp':
-        hp_bonus+=weapon['Passive Bonus']
+        hp_bonus+=weapon['Passive Bonus 2']
     elif weapon['Passive2']=='Df':
-        df_bonus+=weapon['Passive Bonus']
+        df_bonus+=weapon['Passive Bonus 2']
     
     cryo_crit=0
     pyro_attack_boost=0

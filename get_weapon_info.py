@@ -60,6 +60,26 @@ def get_weapon_infox(weapon,refinement):
                   'Passive2':'None',
                   'Passive Bonus': 0}
          weapon['Passive Bonus']=weapon['Passive Bonus']+0.1*(refinement-1)
+    elif weapon.lower() == "staff of homa":
+         weapon = {'base attack': 608,
+                  'Main Stat':'Cd',
+                  'Main Stat Bonus': 0.662,
+                  'Refinement': 1,
+                  'Passive':'Hp',
+                  'Passive2':'hp scaling',
+                  'Passive Bonus': 0.2,
+                  'hp conversion':0.018}
+         weapon['Passive Bonus']=weapon['Passive Bonus']+0.05*(refinement-1)
+         weapon['hp conversion']=weapon['hp conversion']+0.004*(refinement-1)
+    elif weapon.lower()== 'harbinger of dawn':
+        weapon = {'base attack': 401,
+                  'Main Stat':'Cd',
+                  'Main Stat Bonus': 0.469,
+                  'Refinement': 1,
+                  'Passive':'Cr',
+                  'Passive2':'None',
+                  'Passive Bonus': 0.14}
+        weapon['Passive Bonus']=weapon['Passive Bonus']+0.035*(refinement-1)
     else:
         print('Invalid Weapon Selection')
         return False
