@@ -173,7 +173,7 @@ def get_character_infox(character):
           'er d conversion':0.2,
           'name': 'Mona',
           'pronoun':'her'}
-    elif character == 'xingqui':
+    elif character == 'xingqiu':
         info={'element':'hydro',
           'E':6.45,
           'NA': 0.9,

@@ -115,6 +115,8 @@ def get_optimal_damagex(character,weapon,epe):
         d_bonus += 0.15
     if artifact['set']=='2CW' or artifact['set2']=='2CW' or artifact['set']=='4CW':
         d_bonus+=0.15
+        if artifact['set']=='4CW':
+            d_bonus+=(10/character['E_cd'])*0.075
     if artifact['set']=='4LW':
         d_bonus += 0.35*0.75
     if artifact['set']=='2BC' or artifact['set2']=='2BC' or artifact['set']=='4BC':
@@ -643,6 +645,7 @@ def get_optimal_damagex(character,weapon,epe):
             grad = []
             artifact['sands_type'] = 'em'
             artifact['goblet_type'] = 'damage'
+            artifact['circlet_type']='crit rate'
             artifact['hp'] = n_hp*hp+hp_bonus
             artifact['df'] = n_df*df+df_bonus
             artifact['er'] = n_er*er+er_bonus
@@ -871,6 +874,7 @@ def get_optimal_damagex(character,weapon,epe):
             grad = []
             artifact['sands_type']='hp'
             artifact['goblet_type']='damage'
+            artifact['circlet_type']='crit rate'
             artifact['hp']=n_hp*hp+hp_bonus+0.466
             artifact['df']=n_df*df+df_bonus
             artifact['er']=n_er*er+er_bonus
@@ -1096,6 +1100,7 @@ def get_optimal_damagex(character,weapon,epe):
             grad = []
             artifact['sands_type']='df'
             artifact['goblet_type']='damage'
+            artifact['circlet_type']='crit rate'
             artifact['hp']=n_hp*hp+hp_bonus
             artifact['df']=n_df*df+df_bonus+0.466
             artifact['er']=n_er*er+er_bonus
@@ -1320,6 +1325,7 @@ def get_optimal_damagex(character,weapon,epe):
             grad = []
             artifact['sands_type']='er'
             artifact['goblet_type']='damage'
+            artifact['circlet_type']='crit rate'
             artifact['hp']=n_hp*hp+hp_bonus
             artifact['df']=n_df*df+df_bonus
             artifact['er']=n_er*er+er_bonus+0.518
@@ -1544,6 +1550,7 @@ def get_optimal_damagex(character,weapon,epe):
             grad = []
             artifact['sands_type']='er'
             artifact['goblet_type']='attack'
+            artifact['circlet_type']='crit rate'
             artifact['hp']=n_hp*hp+hp_bonus
             artifact['df']=n_df*df+df_bonus
             artifact['er']=n_er*er+er_bonus+0.518
@@ -1768,6 +1775,7 @@ def get_optimal_damagex(character,weapon,epe):
             grad = []
             artifact['sands_type']='em'
             artifact['goblet_type']='attack'
+            artifact['circlet_type']='crit rate'
             artifact['hp']=n_hp*hp+hp_bonus
             artifact['df']=n_df*df+df_bonus
             artifact['er']=n_er*er+er_bonus
@@ -1992,6 +2000,7 @@ def get_optimal_damagex(character,weapon,epe):
             grad = []
             artifact['sands_type']='attack'
             artifact['goblet_type']='attack'
+            artifact['circlet_type']='crit rate'
             artifact['hp']=n_hp*hp+hp_bonus
             artifact['df']=n_df*df+df_bonus
             artifact['er']=n_er*er+er_bonus
@@ -2217,6 +2226,7 @@ def get_optimal_damagex(character,weapon,epe):
             grad = []
             artifact['sands_type']='hp'
             artifact['goblet_type']='attack'
+            artifact['circlet_type']='crit rate'
             artifact['hp']=n_hp*hp+hp_bonus+0.466
             artifact['df']=n_df*df+df_bonus
             artifact['er']=n_er*er+er_bonus
@@ -2442,6 +2452,7 @@ def get_optimal_damagex(character,weapon,epe):
             grad = []
             artifact['sands_type']='df'
             artifact['goblet_type']='attack'
+            artifact['circlet_type']='crit rate'
             artifact['hp']=n_hp*hp+hp_bonus
             artifact['df']=n_df*df+df_bonus+0.466
             artifact['er']=n_er*er+er_bonus
@@ -2768,6 +2779,7 @@ def get_optimal_damagex(character,weapon,epe):
             grad = []
             artifact['sands_type']='em'
             artifact['goblet_type']='damage'
+            artifact['circlet_type']='crit damage'
             artifact['hp']=n_hp*hp+hp_bonus
             artifact['df']=n_df*df+df_bonus
             artifact['er']=n_er*er+er_bonus
@@ -2996,6 +3008,7 @@ def get_optimal_damagex(character,weapon,epe):
             grad = []
             artifact['sands_type']='hp'
             artifact['goblet_type']='damage'
+            artifact['circlet_type']='crit damage'
             artifact['hp']=n_hp*hp+hp_bonus+0.466
             artifact['df']=n_df*df+df_bonus
             artifact['er']=n_er*er+er_bonus
@@ -3221,6 +3234,7 @@ def get_optimal_damagex(character,weapon,epe):
             grad = []
             artifact['sands_type']='df'
             artifact['goblet_type']='damage'
+            artifact['circlet_type']='crit damage'
             artifact['hp']=n_hp*hp+hp_bonus
             artifact['df']=n_df*df+df_bonus+0.466
             artifact['er']=n_er*er+er_bonus
@@ -3445,6 +3459,7 @@ def get_optimal_damagex(character,weapon,epe):
             grad = []
             artifact['sands_type']='er'
             artifact['goblet_type']='damage'
+            artifact['circlet_type']='crit damage'
             artifact['hp']=n_hp*hp+hp_bonus
             artifact['df']=n_df*df+df_bonus
             artifact['er']=n_er*er+er_bonus+0.518
@@ -3669,6 +3684,7 @@ def get_optimal_damagex(character,weapon,epe):
             grad = []
             artifact['sands_type']='er'
             artifact['goblet_type']='attack'
+            artifact['circlet_type']='crit damage'
             artifact['hp']=n_hp*hp+hp_bonus
             artifact['df']=n_df*df+df_bonus
             artifact['er']=n_er*er+er_bonus+0.518
@@ -3893,6 +3909,7 @@ def get_optimal_damagex(character,weapon,epe):
             grad = []
             artifact['sands_type']='em'
             artifact['goblet_type']='attack'
+            artifact['circlet_type']='crit damage'
             artifact['hp']=n_hp*hp+hp_bonus
             artifact['df']=n_df*df+df_bonus
             artifact['er']=n_er*er+er_bonus
@@ -4117,6 +4134,7 @@ def get_optimal_damagex(character,weapon,epe):
             grad = []
             artifact['sands_type']='attack'
             artifact['goblet_type']='attack'
+            artifact['circlet_type']='crit damage'
             artifact['hp']=n_hp*hp+hp_bonus
             artifact['df']=n_df*df+df_bonus
             artifact['er']=n_er*er+er_bonus
@@ -4342,6 +4360,7 @@ def get_optimal_damagex(character,weapon,epe):
             grad = []
             artifact['sands_type']='hp'
             artifact['goblet_type']='attack'
+            artifact['circlet_type']='crit damage'
             artifact['hp']=n_hp*hp+hp_bonus+0.466
             artifact['df']=n_df*df+df_bonus
             artifact['er']=n_er*er+er_bonus
@@ -4567,6 +4586,7 @@ def get_optimal_damagex(character,weapon,epe):
             grad = []
             artifact['sands_type']='df'
             artifact['goblet_type']='attack'
+            artifact['circlet_type']='crit damage'
             artifact['hp']=n_hp*hp+hp_bonus
             artifact['df']=n_df*df+df_bonus+0.466
             artifact['er']=n_er*er+er_bonus
