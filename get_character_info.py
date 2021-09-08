@@ -37,6 +37,7 @@ def get_character_infox(character):
           'er d scaling': False,
           'def d scaling':False,
           'em d scaling': False,
+          'hp bonus_damage':False,
           'name':'Keqing',
           'pronoun':'her'}
     elif character == 'hu tao':
@@ -70,6 +71,7 @@ def get_character_infox(character):
           'er d scaling': False,
           'def d scaling':False,
           'em d scaling': False,
+          'hp bonus_damage':False,
           'hp conversion':0.0626,
           'name': 'Hu Tao',
           'pronoun':'her'}
@@ -104,6 +106,7 @@ def get_character_infox(character):
           'er d scaling': False,
           'def d scaling':False,
           'em d scaling': False,
+          'hp bonus_damage':False,
           'name': 'Ayaka',
           'pronoun':'her'}
     elif character == 'eula':
@@ -137,6 +140,7 @@ def get_character_infox(character):
           'er d scaling': False,
           'def d scaling':False,
           'em d scaling': False,
+          'hp bonus_damage':False,
           'name': 'Eula',
           'pronoun':'her'}
     elif character == 'mona':
@@ -170,6 +174,7 @@ def get_character_infox(character):
           'er d scaling': True,
           'def d scaling':False,
           'em d scaling': False,
+          'hp bonus_damage':False,
           'er d conversion':0.2,
           'name': 'Mona',
           'pronoun':'her'}
@@ -204,6 +209,7 @@ def get_character_infox(character):
           'er d scaling': False,
           'def d scaling':False,
           'em d scaling': False,
+          'hp bonus_damage':False,
           'name': 'Xingqui',
           'pronoun':'his'}
     elif character == 'zhongli':
@@ -243,6 +249,43 @@ def get_character_infox(character):
           'q hp bonus': 0.33,
           'name': 'Zhongli',
           'pronoun':'his'}
+    elif character == 'raiden shogun' or character=='ei':
+        info={'element':'electo',
+          'E':4,
+          'NA': 0.81,
+          'CA': 3.2,
+          'Q':14.73,
+          'E_cd':7,
+          'Q_cd':18,
+          'Q_cost': 90,
+          'base attack':337,
+          'base defense':789,
+          'base hp': 12907,
+          'D_bonus':0,
+          'Att_bonus':0,
+          'Em_bonus':0,
+          'Er_bonus': 0.32,
+          'Cd_bonus': 0,
+          'Cr_bonus': 0,
+          'Hp_bonus': 0,
+          'Def_bonus':0,
+          'QS':'0001',
+          'MDPS':'0001',
+          'level':90,
+          'hp scaling': False,
+          'er scaling': False,
+          'def scaling': False,
+          'em scaling': False,
+          'hp d scaling': False,
+          'er d scaling': False,
+          'def d scaling':False,
+          'em d scaling': False,
+          'hp bonus_damage':False,
+          'name':'Ei',
+          'pronoun':'her'}
+    elif character=='baal':
+        print('Invalid Character Selection, thats not her name')
+        return False
     else:
         print('Invalid Character Selection')
         return False

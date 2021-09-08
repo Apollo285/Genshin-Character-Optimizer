@@ -70,6 +70,10 @@ def calc_damagex(character,weapon, artifacts,epe):
         def_conversion+=(weapon['def conversion'])
     if weapon['Passive2']=='em scaling':
         em_conversion+=(weapon['em conversion'])
+    if weapon['name']=='engulfing lightning':
+        ta+=weapon['Passive Bonus']*er*(character['base attack']+weapon['base attack'])
+    if character['name']=='Ei':
+        db+=0.4*er
         
     if character['hp scaling']==True or  weapon['Passive2']=='hp scaling' or  weapon['Passive']=='hp scaling':
         ta+=hp_conversion*thp
